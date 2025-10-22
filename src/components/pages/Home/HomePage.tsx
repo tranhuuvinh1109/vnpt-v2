@@ -49,7 +49,7 @@ export const HomePage = () => {
       onSuccess: () => refetchAllShift(),
       onError: () => refetchAllShift(),
     });
-  }, [dateActived]);
+  }, [dateActived, createShiftForDay, refetchAllShift]);
 
   const renderShiftByDay = useMemo(() => {
     if (isLoadingShift) {
@@ -98,7 +98,7 @@ export const HomePage = () => {
           refetch={refetchAllShift}
         />
       ));
-  }, [shiftData, dateActived, refetchAllShift, isLoadingShift]);
+  }, [shiftData, dateActived, refetchAllShift, isLoadingShift, handleClickCreateShift]);
 
   useEffect(() => {
     const genDay = getCurrentWeekDays(weekValue ? new Date(weekValue?.toISOString()) : new Date());

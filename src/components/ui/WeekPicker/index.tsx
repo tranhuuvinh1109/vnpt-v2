@@ -55,12 +55,10 @@ const isInSameWeek = (dayA: Dayjs, dayB: Dayjs | null | undefined) => {
   return dayA.isSame(dayB, "week");
 };
 
-function Day(
-  props: PickersDayProps & {
+const Day = (props: PickersDayProps & {
     selectedDay?: Dayjs | null;
     hoveredDay?: Dayjs | null;
-  }
-) {
+  }) => {
   const { day, selectedDay, hoveredDay, ...other } = props;
 
   return (
@@ -80,7 +78,7 @@ type WeekPickerProps = {
   value: Dayjs | null;
   setValue: (value: Dayjs | null) => void;
 };
-export function WeekPicker({ value, setValue }: WeekPickerProps) {
+export const WeekPicker = ({ value, setValue }: WeekPickerProps) => {
   const [hoveredDay, setHoveredDay] = React.useState<Dayjs | null>(null);
 
   return (

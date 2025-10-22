@@ -5,7 +5,7 @@ type ModalProps = PropsWithChildren & {
   isOpen: boolean;
   onClose: () => void;
 };
-export function Modal({ children, isOpen, onClose }: ModalProps) {
+export const Modal = ({ children, isOpen, onClose }: ModalProps) => {
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={onClose}>
@@ -41,4 +41,4 @@ export function Modal({ children, isOpen, onClose }: ModalProps) {
       </Dialog>
     </Transition>
   );
-}
+};

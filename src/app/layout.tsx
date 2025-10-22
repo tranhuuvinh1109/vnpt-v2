@@ -8,7 +8,7 @@ import { MainLayout } from "@/components/layout";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "Next.js TypeScript Template",
+  title: "VNPT",
   description: "A professional Next.js template with TypeScript",
 };
 type TProps = PropsWithChildren;

@@ -7,7 +7,7 @@ type MyDateTimePickerProps = DateTimePickerProps & {
   className?: string;
 };
 
-export function MyDateTimePicker({ ...props }: MyDateTimePickerProps) {
+export const MyDateTimePicker = ({ ...props }: MyDateTimePickerProps) => {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <DemoContainer components={["DateTimePicker"]}>
@@ -15,4 +15,4 @@ export function MyDateTimePicker({ ...props }: MyDateTimePickerProps) {
       </DemoContainer>
     </LocalizationProvider>
   );
-}
+};

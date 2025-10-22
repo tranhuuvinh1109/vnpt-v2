@@ -23,7 +23,7 @@ export const UserLayout = ({ children }: UserLayoutProps) => {
     }
     setUser(userProfile);
     setIsOpenLoginModal(false);
-  }, [userProfile, isPendingUserProfile]);
+  }, [userProfile, isPendingUserProfile, setIsOpenLoginModal, setUser]);
 
   return (
     <>

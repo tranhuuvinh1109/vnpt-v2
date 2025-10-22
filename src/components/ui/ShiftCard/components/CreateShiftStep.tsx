@@ -22,7 +22,7 @@ type CreateShiftStepProps = {
   onClose?: () => void;
 };
 
-export function CreateShiftStep({ data, refetch, onClose }: CreateShiftStepProps) {
+export const CreateShiftStep = ({ data, refetch, onClose }: CreateShiftStepProps) => {
   const [activeStep, setActiveStep] = useState(0);
 
   const { data: allMember } = useGetAllMember();

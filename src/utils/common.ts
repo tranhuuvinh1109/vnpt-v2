@@ -1,5 +1,5 @@
+import { DateItemType } from "@/types";
 import { addDays, format, startOfWeek } from "date-fns";
-import { DateItemType } from "../type";
 
 export function getCurrentWeekDays(date: Date = new Date()): DateItemType[] {
   const start = startOfWeek(date, { weekStartsOn: 0 });
