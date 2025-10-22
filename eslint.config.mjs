@@ -57,35 +57,7 @@ const eslintConfig = [
     plugins: { import: importPlugin },
     settings: { "import/resolver": { typescript: { project: "./tsconfig.json" } } },
     rules: {
-      "import/order": [
-        "warn",
-        {
-          groups: [
-            "builtin",
-            "external",
-            "internal",
-            "parent",
-            "sibling",
-            "index",
-            "object",
-            "type",
-          ],
-          pathGroups: [
-            // App and Components group
-            { pattern: "@/app/**", group: "internal", position: "before" },
-            { pattern: "@/components/**", group: "internal", position: "before" },
-            // Other internal folders group
-            { pattern: "@/hooks/**", group: "internal", position: "before" },
-            { pattern: "@/lib/**", group: "internal", position: "before" },
-            { pattern: "@/styles/**", group: "internal", position: "before" },
-            // Types group
-            { pattern: "@/types/**", group: "type", position: "before" },
-          ],
-          pathGroupsExcludedImportTypes: ["builtin"],
-          "newlines-between": "always",
-          alphabetize: { order: "asc", caseInsensitive: true },
-        },
-      ],
+      "import/order": "off",
       "react/function-component-definition": [
         "warn",
         { namedComponents: "arrow-function", unnamedComponents: "arrow-function" },
