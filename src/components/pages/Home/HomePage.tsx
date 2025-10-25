@@ -21,6 +21,7 @@ export const HomePage = () => {
     data: shiftData,
     refetch: refetchAllShift,
     isLoading: isLoadingShift,
+    dataUpdatedAt,
   } = useGetAllShiftOrderByDate({
     from: localISOString(days[0].date),
     to: localISOString(days[6].date),
@@ -95,10 +96,19 @@ export const HomePage = () => {
           data={shift}
           label={dateActived.label}
           key={shift._id}
-          refetch={refetchAllShift}
+          refetch={() => {
+            refetchAllShift();
+          }}
         />
       ));
-  }, [shiftData, dateActived, refetchAllShift, isLoadingShift, handleClickCreateShift]);
+  }, [
+    shiftData,
+    dateActived,
+    refetchAllShift,
+    isLoadingShift,
+    handleClickCreateShift,
+    dataUpdatedAt,
+  ]);
 
   useEffect(() => {
     const genDay = getCurrentWeekDays(weekValue ? new Date(weekValue?.toISOString()) : new Date());

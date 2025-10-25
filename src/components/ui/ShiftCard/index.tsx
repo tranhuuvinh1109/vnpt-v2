@@ -8,7 +8,7 @@ import Image from "next/image";
 type ShiftCardProps = {
   data: ShiftDetailType;
   label?: string;
-  refetch?: () => {};
+  refetch?: () => void;
 };
 
 export const ShiftCard = ({ data, label, refetch }: ShiftCardProps) => {

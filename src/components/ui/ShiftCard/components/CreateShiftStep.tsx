@@ -18,7 +18,7 @@ const steps = ["Phân công", "Nhận ca", "Hiện tại", "Tồn đọng"];
 
 type CreateShiftStepProps = {
   data: ShiftDetailType;
-  refetch?: () => {};
+  refetch?: () => void;
   onClose?: () => void;
 };
 
@@ -308,4 +308,4 @@ export const CreateShiftStep = ({ data, refetch, onClose }: CreateShiftStepProps
       </StyledEngineProvider>
     </>
   );
-}
+};
