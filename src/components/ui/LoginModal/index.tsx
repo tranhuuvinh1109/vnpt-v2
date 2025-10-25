@@ -50,7 +50,9 @@ export const LoginModal = ({ isOpen, onClose }: LoginModalProps) => {
       <Modal isOpen={isOpen} onClose={onClose}>
         <div className="flex flex-col gap-6 md:flex-row">
           <div className="md:flex md:w-2/5 md:items-center md:justify-center md:rounded-l-xl md:bg-blue-500 md:text-white">
-            <Image src="/images/logo.png" alt="logo" className="mx-auto max-w-48 md:hidden" fill />
+            <div className="relative mx-auto h-8 w-28 md:hidden">
+              <Image src="/images/logo.png" alt="logo" className="" fill />
+            </div>
             <h1 className="font-montserrat text-center text-xl font-semibold text-blue-600 md:hidden">
               Đăng nhập
             </h1>

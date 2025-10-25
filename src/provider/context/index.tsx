@@ -28,7 +28,10 @@ export const AppContext = ({ children }: AppContextProps) => {
   const [isOpenLoginModal, setIsOpenLoginModal] = useState(false);
 
   useEffect(() => {
-    if (!user) return;
+    if (!user) {
+      setIsOpenLoginModal(true);
+      return;
+    }
     setIsOpenLoginModal(false);
   }, [user]);
 
